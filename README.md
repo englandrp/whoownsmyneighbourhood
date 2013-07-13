@@ -1,4 +1,4 @@
-whoownsmyneighbourhood
+<h1>whoownsmyneighbourhood</h1>
 ======================
 
 Find out who owns places near you, and help take responsibility for land, buildings and activities in your neighbourhood
@@ -13,3 +13,8 @@ Find out who owns places near you, and help take responsibility for land, buildi
 <p>The foundation of this site is Kirklees Council's land ownership information, which we've made available online for the first time as part of this project. We hope to add other types of information to Who Owns My Neighbourhood? in the future. If you have any suggestions about what might be useful then please let us know.</p>
 <p>We realise that there are lots of things you can't see just by looking - you can't see someone's memories of a place or someone's aspirations for what it might become in the future. Who Owns My Neighbourhood? is about uncovering that hidden knowledge, as much as it is about opening up land ownership information.</p>
 <p>This is a shared space - what grows from it is up to you.</p>
+
+<h3>License</h3>
+License
+
+MIT - <a href="http://richardengland.co.uk/thumbprintcooperative/mit-license.html">Thumbprintcooperative/mit-license.html</a>
