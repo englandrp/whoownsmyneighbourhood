@@ -1,0 +1,156 @@
+<!DOCTYPE html> 
+<html dir="ltr" lang="en-US"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <title>Add a place | Who Owns My Neighbourhood?</title> 
+    <link rel="profile" href="http://gmpg.org/xfn/11" /> 
+    <link rel="stylesheet" type="text/css" media="all" href="/blog/wp-content/themes/twentyten/style.css" /> 
+    <link rel="stylesheet" type="text/css" media="all" href="/x/css/whoownsmyneighbourhood.css" /> 
+    <script type="text/javascript" src="/x/js/jquery-1.4.4.js"></script> 
+    <script type="text/javascript" src="/x/js/whoownsmyneighbourhood.js"></script> 
+    <script type="text/javascript"> 
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-20731064-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script> 
+</head> 
+<body class="home blog"> 
+    <div id="wrapper" class="hfeed"> 
+	<div id="header"> 
+		<div id="masthead"> 
+			<div id="branding" role="banner"> 
+				<h1 id="site-title"> 
+					<span> 
+						<a href="/" title="Who Owns My Neighbourhood?" rel="home">Who Owns My Neighbourhood?</a> 
+					</span> 
+				</h1> 
+                
+				<div id="site-description"> 
+			<a href="/signout">Sign out</a> 
+                </div> 
+			</div><!-- #branding --> 
+			<div id="access" role="navigation"> 
+			  	<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div> 
+                <div class="menu"> 
+                    <ul> 
+                        <li> 
+                            <a href="/">Home</a> 
+                        </li> 
+                        <li> 
+                            <a href="/mypage">My Page</a> 
+                        </li> 
+                        <li> 
+                            <a href="/about">About</a> 
+                        </li> 
+                        <li> 
+                            <a href="/blog/">Blog</a> 
+                        </li> 
+                        <li> 
+                            <a href="/contact">Contact us</a> 
+                        </li> 
+                        <li> 
+                            <a href="/help">Help</a> 
+                        </li> 
+                    </ul> 
+                </div> 
+			</div><!-- #access --> 
+		</div><!-- #masthead --> 
+	</div><!-- #header --> 
+<script type="text/javascript"> 
+ 
+$(document).ready(function() {
+	initPlaceEdit();
+});
+ 
+</script> 
+	<div id="main"> 
+				
+		<div class="od_content"> 
+			<form action="/place" method="post"> 
+				<h2>Add a place</h2>
+				<p class="alert">The location field is required.</p> 				
+			<div class="edit_screen"> 
+				<div class="left_screen">
+					<p><strong>Location:</strong>
+					<br /><input type="text" class="wide_input" name="location" value="" /></p> 				
+				</div>
+				<div class="right_screen">
+					<p><br />Enter the location of the place you want to add.</p> 
+				</div>
+			</div>
+			<div class="edit_screen"> 
+				<div class="left_screen">
+					<p>Description:
+					<br /><textarea name="description"></textarea></p> 
+				</div>
+				<div class="right_screen">
+					<p><br />If you wish, give a brief description of where it is and what is there.</p> 
+				</div>
+			</div>
+			<div class="edit_screen"> 
+				<div class="left_screen">
+					<div id="mapdiv" class="map editmap"> 
+					</div> 
+				</div>
+				<div class="right_screen">
+					<p>Use the map controls to get the circle into the right position on the map.</p> 
+					<p>You can drag the map or the circle using to pan to the right place and the controls top left let you zoom in and out and move the map around.</p> 
+				</div>
+			</div>
+			<hr />
+			<div class="edit_screen"> 
+				<div class="left_screen">
+					<p>Land registry number:
+					<br /><input type="text" class="wide_input" name="lr_title" value="" /></p> 
+				</div>
+				<div class="right_screen">
+					<p><br />Optional</p>
+				</div>
+			</div>
+			<div class="edit_screen"> 
+				<div class="left_screen">
+					<hr /> 
+					<p><input type="submit" class="submit" name="action" value="Submit" /></p> 
+					<input type="hidden" name="easting" id="js_easting" value="413245.02516411" /> 
+					<input type="hidden" name="northing"id="js_northing" value="416658.34354486" /> 
+				</div>
+				<div class="right_screen">
+				</div>
+			</div>
+			</form>
+	    </div> 
+	</div><!-- #main --> 
+	<div id="footer" role="contentinfo"> 
+		<div class="addthis_toolbox addthis_default_style"> 
+			<a class="addthis_button_facebook"></a> 
+			<a class="addthis_button_twitter"></a> 
+			<a class="addthis_button_myspace"></a> 
+			<a class="addthis_button_stumbleupon"></a> 
+			<a class="addthis_button_digg"></a> 
+			<a class="addthis_button_google"></a> 
+			<a class="addthis_button_reddit"></a> 
+			<a class="addthis_button_favorites"></a> 
+			<a class="addthis_button_email"></a> 
+			<a class="addthis_button_print"></a> 
+		</div> 
+		<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4ce4fe9267294d05"></script> 
+		<div id="colophon"> 
+			<div id="site-info"> 
+				<a href="http://peterfitzpatrick.name/" title="Who Owns My Neighbourhood?" rel="home">Who Owns My Neighbourhood?</a> 
+			</div><!-- #site-info --> 
+            <p class="addendum"> 
+                This service has been brought to you by <a href="http://www.thumbprint.coop" target="_blank">Thumbprint Co-operative</a> 
+            </p> 
+            <p class="addendum"> 
+                It has been produced as part of Kirklees Council's open data initiative in partnership with <a href="http://www.nesta.org.uk" target="_blank">NESTA</a> 
+            </p> 
+		</div><!-- #colophon --> 
+	</div><!-- #footer --> 
+</div><!-- #wrapper --> 
+</body> 
+</html>

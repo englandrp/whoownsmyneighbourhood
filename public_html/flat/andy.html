@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>mappedout</title>
+    </head>
+    <body onload="init();">
+		<div style="width:900px;height:540px;background-color:#eeeeee;" id="map"></div>
+		<script type="text/javascript" language="javascript" src="http://openspace.ordnancesurvey.co.uk/osmapapi/openspace.js?key=94C589BE7F94D044E0405F0ACA606319"></script>
+		<script defer="defer" type="text/javascript">
+
+var map, layer, control;
+
+function init()
+{
+	var opts = { resolutions: [10, 5, 4, 2.5, 2, 1], restrictedExtent: new OpenSpace.MapBounds(394000, 397000, 434000, 435000) };
+	map = new OpenSpace.Map('map', opts);
+
+	var defStyle = {strokeColor:"#ff0000", strokeOpacity:"1.0", strokeWidth:2, fillColor:"#990000", cursor:"pointer"};
+    var sty = OpenLayers.Util.applyDefaults(defStyle, OpenLayers.Feature.Vector.style["default"]);
+    var sm = new OpenLayers.StyleMap({
+          'default':sty
+      });
+
+	var pts = new OpenLayers.Layer.Vector("Points", {
+			protocol: new OpenLayers.Protocol.HTTP({
+			url: "/ajax/bboxplots",
+			format: new OpenLayers.Format. GeoJSON()
+		}),   
+		strategies: [new OpenLayers.Strategy.BBOX()],
+		styleMap: sm,
+		maxResolution:map.resolutions[5]
+	});
+	map.addLayer(pts);
+
+/*
+	control = new OpenLayers.Control.SelectFeature(pts,{
+		clickout:true,
+		toggle:false,
+		multiple:false,
+		hover:false,
+		onSelect:onFeatureSelect, 
+		onUnselect:onFeatureUnselect,
+		id:"selectedFeatureControl" 
+	});
+	map.addControl(control);
+	control.activate();
+*/
+
+	map.setCenter(new OpenSpace.MapPoint(411715.78,416388.44), 0);
+}
+
+		</script>
+</body>
+</html>

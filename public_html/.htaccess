@@ -1,0 +1,10 @@
+Options +FollowSymLinks
+DirectoryIndex index.php
+
+Options -Indexes
+
+RewriteEngine on
+
+RewriteCond $1 !^(index\.php|x|blog|flat|robots\.txt)
+RewriteRule ^(.*)$ /index.php?/$1 [L]
+

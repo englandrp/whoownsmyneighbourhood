@@ -1,0 +1,65 @@
+.od_content { display:block; float:left; width:900px; padding:0 20px 36px 20px; }
+#postcodeform > p > span { font-size:1.3em; }
+#pcode { font-size:1.3em; width:116px; } 
+#pcodesubmit { font-size:1.3em; padding:4px 6px 6px 6px; } 
+#map_key {  }
+#map_key img { position:relative; top:4px; }
+#map_key form.formblock { display:block; float:left; }
+.map_holder { display:block; float:left; width:900px; padding:12px 0 0 0; }
+.map { float:left; width:900px; height:540px; }
+.homemap { width:620px; height:400px; background:#ffffff url('/x/img/BirchRoadBerryBrow.jpg') no-repeat; }
+.editmap { width:456px; height:318px; background-color:#d0d0d0; }
+#aggregator { display:block; float:right; width:260px; }
+#aggregator h2 { margin:0 0 12px 0; }
+#aggregator p { margin:0 0 8px 0;  }
+#aggregator p a { text-decoration:underline;  }
+#aggregator p a:hover { text-decoration:underline;  }
+#photo_caption { float:left; padding:382px 0 0 0; text-align:right; }
+.popup { padding:4px 12px; width:192px; color:#474747; }
+.popup a { color:#333333; font-weight:bold; text-decoration:underline; }
+.popup a:hover { color:#666666; text-decoration:underline; }
+#home_map, #region_map { width:880px; height:582px; background-color:#eeeeee; }
+#plot_map { width:516px; height:312px; background-color:#eeeeee; }
+ul.plot_nav { display:block; float:left; width:852px; margin:0 0 0 0; border-bottom:1px solid #333333; }
+.plot_nav li { display:block; float:left; margin:0 0 0 24px; background:#c0c0f0; position:relative; bottom:-1px; }
+.plot_nav li a { display:block; float:left; text-align:center; text-decoration:none; height:24px; padding:8px 24px 4px 24px; font-size:160%; cursor:pointer; }
+a.on { border:1px solid #333333; border-bottom:1px solid #ffffff; background:#ffffff; color:#333333; }
+a.on:hover { color:#666666; }
+a.off { border:1px solid #333333; background:#d0d0d0d; color:#666666; }
+a.off:hover { background:#ffffff; color:#333333; border:1px solid #333333; border-bottom:1px solid #ffffff; }
+.wide_screen { display:block; float:left; width:852px; padding:24px; }
+.edit_screen { display:block; float:left; width:852px; padding:0 24px 12px 24px; }
+.left_screen { display:block; float:left; width:484px; padding:0 48px 0 0; }
+.left_screen textarea { width:450px; height:120px; margin:8px 0; font-size:16pt; }
+.right_screen, #flickr_images { display:block; float:left; width:320px; }
+.right_screen textarea { width:310px; height:120px; margin:8px 0; font-size:16pt; }
+#flickr_images { padding:24px 0 0 0; }
+#flickr_images img { display:block; float:left; padding:0 5px 5px 0; }
+#plot_details, #plot_addendum { display:block; float:left; width:484px; padding:24px 0 0 0; }
+#plot_addendum { width:320px; }
+#plot_addendum h3 { font-size:1.5em; margin:0 0 6px 0; }
+#plot_addendum ul { font-size:1.3em; list-style:none; margin:0 0 26px 0; }
+#plot_addendum ul li { margin:0 0 18px 0; }
+#js_community_contacts { margin-top:12px; font-weight:bold; }
+input.vanilla { padding:2px 6px 2px 6px; margin:0 12px 0 0; background-color:#eeeeee; color:#333333; cursor:pointer; border:1px solid #666666; }
+input.vanilla:hover { color:#ffffff; background-color:#666666; }
+#js_accordion h2 a { color:#ffffff; }
+ul.rss li { list-style-image: url(/x/img/ico_rss_16x16.gif); font-size:1.2em; }
+select { width:240px; border:1px solid #666; padding:3px; font-size:1.2em; color:#333; background-color:#fff; }
+.submit { padding:6px; background-color:#666666; color:#ffffff !important; font-size:140%; cursor:pointer; }
+.submit:hover { background-color:#eeeeee; color:#474747 !important; }
+.message_roster { display:block; float:left; width:482px; border-right:1px solid #dddddd; border-left:1px solid #dddddd; border-bottom:1px solid #dddddd; }
+.message_roster h2 { padding:4px 12px; border-bottom:1px solid #dddddd; border-top:1px solid #dddddd; background-color:#666666; color:#ffffff; cursor:pointer;}
+.message_roster h2 a { color:#ffffff; }
+p.alert { font-weight:bold; color:#333333; }
+p.hiddenalert { display:none; }
+.uc_code { text-transform:uppercase; }
+label.define { padding:4px 8px 0 0; display:block; float:left; width:152px; font-weight:bold; text-align:right; }
+ul.help-examples li { margin:0 0 18px 0; font-size:1.3em; }
+.accordion-content { padding:4px 12px; }
+span.toggler {float:right; font-size:60%; padding:0 20px 0 0; }
+h2.ui-state-active span.toggler { color:#666666; }
+h2.anchor { padding:54px 0 18px 0; }
+.quietly { font-size:90%; color:#888888; }
+.wide_input { width:360px; }
+.right { float:right; }

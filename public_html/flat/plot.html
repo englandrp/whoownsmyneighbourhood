@@ -1,0 +1,229 @@
+
+<!DOCTYPE html> 
+<html dir="ltr" lang="en-US"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <title>Who Owns My Neighbourhood?</title> 
+    <link rel="profile" href="http://gmpg.org/xfn/11" /> 
+    <link rel="stylesheet" type="text/css" media="all" href="http://peterfitzpatrick.name/blog/wp-content/themes/twentyten/style.css" /> 
+    <link rel="stylesheet" type="text/css" media="all" href="http://peterfitzpatrick.name/x/css/new.css" /> 
+    <script type="text/javascript" src="/x/js/jquery-1.4.4.js"></script> 
+    <script type="text/javascript" src="/x/js/jquery-ui-1.8.7.custom.min.js"></script> 
+    <script type="text/javascript" src="http://openspace.ordnancesurvey.co.uk/osmapapi/openspace.js?key=94C589BE7F94D044E0405F0ACA606319"></script> 
+    <script type="text/javascript" src="/x/js/whoownsmyneighbourhood.js"></script> 
+    <script type="text/javascript"> 
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-20731064-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script> 
+</head> 
+<body class="home blog"> 
+    <div id="wrapper" class="hfeed"> 
+	<div id="header"> 
+		<div id="masthead"> 
+			<div id="branding" role="banner"> 
+				<h1 id="site-title"> 
+					<span> 
+						<a href="/" title="Who Owns My Neighbourhood?" rel="home">Who Owns My Neighbourhood?</a> 
+					</span> 
+				</h1> 
+                
+				<div id="site-description"> 
+			<a href="/signout">Sign out</a> 
+                </div> 
+			</div><!-- #branding --> 
+			<div id="access" role="navigation"> 
+			  	<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div> 
+                <div class="menu"> 
+                    <ul> 
+                        <li> 
+                            <a href="/">Home</a> 
+                        </li> 
+                        <li> 
+                            <a href="/mypage">My Page</a> 
+                        </li> 
+                        <li> 
+                            <a href="/about">About</a> 
+                        </li> 
+                        <li> 
+                            <a href="/blog/">Blog</a> 
+                        </li> 
+                        <li> 
+                            <a href="/contact">Contact us</a> 
+                        </li> 
+                        <li> 
+                            <a href="/help">Help</a> 
+                        </li> 
+                    </ul> 
+                </div> 
+			</div><!-- #access --> 
+		</div><!-- #masthead --> 
+	</div><!-- #header --> 
+<script type="text/javascript"> 
+	$(document).ready(function() {
+			initPlot();
+    });
+</script> 
+	<div id="main"> 
+	<div class="od_content"> 
+        <form method="post" action="/" id="postcodeform"> 
+            <p><span><strong>Enter postcode or postcode sector (eg HD1):</strong>&nbsp;</span> 
+            <input type="text" id="pcode" name="postcode" size="14" maxlength="10" value="" /> 
+            <input type="submit" name="submit" id="pcodesubmit" value="Go" /></p> 
+            <span id="map_key">Council owned land <img src="/x/img/plot.png" alt="Council owned land" /> </span> 
+        </form> 
+        <form action="/" method="post"> 
+			<input type="submit" class="fakelink" name="submit" value="&laquo; View all local plots" /> 
+			<input type="hidden" name="js_plot_id" id="js_plot_id" value="4523" /> 
+			<input type="hidden" name="js_easting" id="js_easting" value="425533.91" /> 
+			<input type="hidden" name="js_northing" id="js_northing" value="424128.09" />        
+        </form> 
+        <div class="map_holder"> 
+            <div id="map" class="map"></div> 
+        </div> 
+		<div class="wide_screen"> 
+			<ul class="plot_nav"> 
+				<li><a class="off" id="js_info">Info</a></li> 
+				<li><a class="off" id="js_contacts">Contacts</a></li> 
+				<li><a class="on" id="js_contribute">Contribute</a></li> 
+				<li><a class="off" id="js_updates">Updates</a></li> 
+			</ul> 
+			<div class="left_screen"> 
+                <div id="plot_details"> 
+                
+					<div class="message_roster" id="js_accordion"> 
+						<h2><a>Local news</a> <span class="toggler">open</span></h2> 
+						<div class="accordion-content"> 
+							<p>What are the latest goings on on this plot of land?</p> 
+							<p class="hiddenalert" id="js_localnews_alert"></p> 
+							<form method="post" action="#"> 
+								<p><textarea name="localnews" id="js_localnews"></textarea></p> 
+								<p><input type="submit" class="submit" name="action" value="Add your news" id="js_localnews_submit" /></p> 
+							</form> 
+						</div> 
+						<h2><a>Local names</a> <span class="toggler">open</span></h2> 
+						<div class="accordion-content"> 
+							<p>Does this plot of land have a local name?</p> 
+							<p class="hiddenalert" id="js_localname_alert"></p> 
+							<form method="post" action="#"> 
+								<p><textarea name="localname" id="js_localname"></textarea></p> 
+								<p><input type="submit" class="submit" name="action" value="Add a local name" id="js_localname_submit" /></p> 
+							</form> 
+						</div> 
+						<h2><a>Local history</a> <span class="toggler">open</span></h2> 
+						<div class="accordion-content"> 
+							<p>Do you have particular memories about things that have happened on this plot of land?</p> 
+							<p class="hiddenalert" id="js_localhistory_alert"></p> 
+							<form method="post" action="#"> 
+								<p><textarea name="localhistory" id="js_localhistory"></textarea></p> 
+								<p><input type="submit" class="submit" name="action" value="Add your memories" id="js_localhistory_submit" /></p> 
+							</form> 
+						</div> 
+						<h2><a>Local organisations</a> <span class="toggler">open</span></h2> 
+						<div class="accordion-content"> 
+							<p>Are there any relevant local organisations for this plot of land?
+							<br />Add their website details below</p> 
+							<p class="hiddenalert" id="js_localorg_alert"></p> 
+							<form method="post" action="#"> 
+								<p>Name of organisation<br /> 
+									<input type="text" class="wide_input" name="localorgname" id="js_localorg_name" /></p> 
+								<p>Web address<br /> 
+									<input type="text" class="wide_input" name="localorgurl" id="js_localorg_url" /></p> 
+								<p><input type="submit" class="submit" name="action" value="Add organisation details" id="js_localorg_submit" /></p> 
+							</form> 
+						</div> 
+					</div>                
+                <!--
+                <p><strong>Ownership:</strong> this plot of land is owned by Kirklees Council</p>
+                array(3) {
+  [0]=>
+  object(stdClass)#19 (2) {
+    ["msg"]=>
+    string(13) "local history"
+    ["timestamp"]=>
+    string(10) "1302272419"
+  }
+  [1]=>
+  object(stdClass)#20 (2) {
+    ["msg"]=>
+    string(124) "Long time ago, back in days of yore when the Earth was still young and goblins were still a figment of a fevered imagination"
+    ["timestamp"]=>
+    string(10) "1302251288"
+  }
+  [2]=>
+  object(stdClass)#21 (2) {
+    ["msg"]=>
+    string(19) "no memroy whatsoevr"
+    ["timestamp"]=>
+    string(10) "1302188630"
+  }
+}
+<p><strong>Land Registry Title:</strong> WYK823128</p>
+<p><strong>Deed:</strong> 3424</p>
+<p><strong>Location:</strong> Two Plots of Land at Laithe Croft Road, Soothill, Batley</p>
+<p><strong>Nature of document:</strong> Conveyance</p>
+<p><strong>Grid reference:</strong> SE2524</p>
+				--> 
+				</div> 
+			</div> 
+			<div class="right_screen"> 
+                <div id="plot_addendum"> 
+			<h3>Local news</h3> 
+					<ul id="js_local_news_list">						<li>There are lots of goings on on this plot of land - perhaps I should tell you a few...<br /><span class="quietly">8th April 2011, 15:19</span></li> 
+						<li>here is the news<br /><span class="quietly">8th April 2011, 09:26</span></li> 
+						<li>lots of interesting stuff<br /><span class="quietly">6th April 2011, 16:11</span></li> 
+						<li>well i dunno<br /><span class="quietly">6th April 2011, 15:57</span></li> 
+					</ul>			<h3>Local names</h3> 
+					<ul id="js_local_name_list">						<li>Apollo 13 with a big lump of thing on the side made of cheese akthough not very clever and full of other stuff that I don&#39;t want to go into right now although having said that things could change and am I a word salad?<br /><span class="quietly">8th April 2011, 09:27</span></li> 
+						<li>no<br /><span class="quietly">6th April 2011, 14:35</span></li> 
+				</ul>			<h3>Local history</h3> 
+				<ul id="js_local_history_list">						<li>local history<br /><span class="quietly">8th April 2011, 15:20</span></li> 
+						<li>Long time ago, back in days of yore when the Earth was still young and goblins were still a figment of a fevered imagination<br /><span class="quietly">8th April 2011, 09:28</span></li> 
+						<li>no memroy whatsoevr<br /><span class="quietly">7th April 2011, 16:03</span></li> 
+				</ul>			<h3>Local organisations</h3> 
+				<ul id="js_local_org_list">						<li><a href="http://guardian.co.uk" target="_blank">The Guardian</a></li> 
+						<li><a href="http://bbc.co.uk/" target="_blank">The BBc</a></li> 
+					</ul>                <!--
+                <p><a href="http://www.kirklees.gov.uk/answers/land-property/land-property.shtml" target="_blank"><strong>Land and Property FAQs</strong></a></p>
+<p><strong>Land ownership issues:</strong> any questions on this subject should be emailed to the Terrier team at dps@kirklees.gov.uk</p>
+				--> 
+				</div> 
+            </div> 
+        </div> 
+	</div> 
+	</div> 
+ 
+	<div id="footer" role="contentinfo"> 
+		<div class="addthis_toolbox addthis_default_style"> 
+			<a class="addthis_button_facebook"></a> 
+			<a class="addthis_button_twitter"></a> 
+			<a class="addthis_button_myspace"></a> 
+			<a class="addthis_button_stumbleupon"></a> 
+			<a class="addthis_button_digg"></a> 
+			<a class="addthis_button_google"></a> 
+			<a class="addthis_button_reddit"></a> 
+			<a class="addthis_button_favorites"></a> 
+			<a class="addthis_button_email"></a> 
+			<a class="addthis_button_print"></a> 
+		</div> 
+		<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4ce4fe9267294d05"></script> 
+		<div id="colophon"> 
+			<div id="site-info"> 
+				<a href="http://peterfitzpatrick.name/" title="Who Owns My Neighbourhood?" rel="home">Who Owns My Neighbourhood?</a> 
+			</div><!-- #site-info --> 
+            <p class="addendum"> 
+                This service has been brought to you by <a href="http://www.thumbprint.coop" target="_blank">Thumbprint Co-operative</a> 
+            </p> 
+            <p class="addendum"> 
+                It has been produced as part of <a href="http://www.kirklees.gov.uk" target="_blank">Kirklees Council</a>'s open data initiative in partnership with <a href="http://www.nesta.org.uk" target="_blank">NESTA</a> 
+            </p> 
+		</div><!-- #colophon --> 
+	</div><!-- #footer --> 
+</div><!-- #wrapper --> 
+</body> 
+</html>

@@ -1,0 +1,68 @@
+#site-title a { color: #333333; }
+body, input, textarea { color: #333333; }
+a, a:link, p a, p a:link { color: #06C; }
+#site-description a { color: #333; }
+#site-description a.boss { color: #06C; }
+#site-description a.boss:hover { color: #666; }
+#access div.menu ul li { background-color:#474747; margin:0 1px 0 0; }
+#access div.menu ul li a:hover { background-color:#181818; }
+#access div.menu ul li.current_page_item { background-color:#181818; }
+p.addendum a { color:#06c; }
+p.addendum a:hover { color:#666; }
+#js_accordion a { color:#ffffff; }
+
+.od_content { display:block; float:left; width:900px; padding:0 20px 36px 20px; }
+#map_key { float:right; }
+#map_key img { position:relative; top:4px; }
+.map_holder { display:block; float:left; width:900px; padding:12px 0 0 0; }
+.map { float:left; width:900px; height:540px; }
+.homemap { width:620px; height:400px; background:#ffffff url('/x/img/BirchRoadBerryBrow.jpg') no-repeat; }
+.editmap { width:456px; height:318px; }
+#aggregator { display:block; float:right; width:260px; }
+#aggregator h2 { margin:0 0 12px 0; }
+#aggregator p { margin:0 0 8px 0;  }
+#aggregator p a { text-decoration:none;  }
+#aggregator p a:hover { text-decoration:underline;  }
+#photo_caption { float:left; padding:382px 0 0 0; text-align:right; }
+.popup { padding:4px 12px; width:192px; color:#474747; }
+.popup a { color:#333333; font-weight:bold; text-decoration:underline; }
+.popup a:hover { color:#666666; text-decoration:underline; }
+#home_map, #region_map { width:880px; height:582px; background-color:#eeeeee; }
+#plot_map { width:516px; height:312px; background-color:#eeeeee; }
+input.fakelink { border:none; text-decoration:underline; color:#666666; font-size:1.3em; cursor:pointer; background:none; }
+input.fakelink:hover { color:#333333; }
+ul.plot_nav { display:block; float:left; width:852px; margin:0 0 0 0; border-bottom:1px solid #333333; }
+.plot_nav li { display:block; float:left; margin:0 0 0 24px; background-color:#e0e0e0; position:relative; bottom:-1px; }
+.plot_nav li a { display:block; float:left; text-align:center; text-decoration:none; height:24px; padding:8px 24px 4px 24px; font-size:160%; cursor:pointer; }
+a.on { border:1px solid #333333; border-bottom:1px solid #ffffff; background:#ffffff; color:#333333; }
+a.on:hover { color:#474747; }
+a.off { border:1px solid #333333; background:#d0d0d0d; color:#474747; }
+a.off:hover { background:#ffffff; color:#333333; border:1px solid #333333; border-bottom:1px solid #ffffff; }
+.wide_screen { display:block; float:left; width:852px; padding:24px; }
+.left_screen { display:block; float:left; width:484px; padding:0 48px 0 0; }
+.left_screen textarea { width:450px; height:120px; margin:8px 0; font-size:1.3em; }
+.right_screen, #flickr_images { display:block; float:left; width:320px; }
+.right_screen textarea { width:310px; height:120px; margin:8px 0; font-size:1.3em; }
+#flickr_images { padding:24px 0 0 0; }
+#flickr_images img { display:block; float:left; padding:0 5px 5px 0; }
+#plot_details, #plot_addendum { display:block; float:left; width:484px; padding:24px 0 0 0; }
+#plot_addendum { width:320px; }
+#plot_addendum h3 { font-size:1.5em; margin:0 0 6px 0; }
+#plot_addendum ul { font-size:1.3em; list-style:none; margin:0 0 12px 0; }
+#plot_addendum ul li { margin:0 0 4px 0; }
+#js_community_contacts { margin-top:12px; font-weight:bold; }
+.submit { padding:6px; background-color:#666666; color:#ffffff !important; font-size:140%; cursor:pointer; }
+.submit:hover { background-color:#eeeeee; color:#474747 !important; }
+.message_roster { display:block; float:left; width:482px; border-right:1px solid #dddddd; border-left:1px solid #dddddd; border-bottom:1px solid #dddddd; }
+.message_roster h2 { padding:4px 12px; border-bottom:1px solid #dddddd; border-top:1px solid #dddddd; background-color:#666666; color:#ffffff; cursor:pointer;}
+p.alert { font-weight:bold; color:#333333; }
+p.hiddenalert { display:none; }
+.uc_code { text-transform:uppercase; }
+label.define { padding:4px 8px 0 0; display:block; float:left; width:152px; font-weight:bold; text-align:right; }
+ul.help-examples li { margin:0 0 18px 0; font-size:1.3em; }
+.accordion-content { padding:4px 12px; }
+span.toggler {float:right; font-size:60%; padding:0 20px 0 0; }
+h2.ui-state-active span.toggler { color:#666666; }
+h2.anchor { padding:54px 0 18px 0; }
+.quietly { font-size:90%; color:#888888; }
+.wide_input { width:360px; }

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-US">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <title>LOCAL: Home | Who Owns My Neighbourhood?</title>
+
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="http://local.whoownsmyneighbourhood.org.uk/blog/wp-content/themes/twentyten/style.css" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="http://local.whoownsmyneighbourhood.org.uk/x/css/new.css" />
+
+    <script type="text/javascript" src="/x/js/jquery-1.4.4.js"></script> 
+    <script type="text/javascript" src="/x/js/whoownsmyneighbourhood.js"></script> 
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+
+        _gaq.push(['_setAccount', 'UA-20731064-1']);
+
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+        })();
+
+    </script>
+
+</head>
+
+<body class="home blog">
+
+    <div id="wrapper" class="hfeed">
+
+	<div id="header">
+
+		<div id="masthead">
+
+			<div id="branding" role="banner">
+
+				<h1 id="site-title">
+
+					<span>
+
+						<a href="/" title="Who Owns My Neighbourhood?" rel="home">Who Owns My Neighbourhood?</a>
+
+					</span>
+
+				</h1>
+
+                
+
+				<div id="site-description">
+
+			Already registered? <a href="/signin" class="boss">Sign in</a> | Want to take part? <a href="/register">Sign up</a> 
+                </div>
+
+			</div><!-- #branding -->
+
+			<div id="access" role="navigation">
+
+			  	<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+
+                <div class="menu">
+
+                    <ul>
+
+                        <li class="current_page_item">
+
+                            <a href="/">Home</a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="/about">About</a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="/blog/">Blog</a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="/mypage">My Page</a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="/help">Help</a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+			</div><!-- #access -->
+
+		</div><!-- #masthead -->
+
+	</div><!-- #header -->
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+        initHome('');
+
+    });
+
+</script>
+
+
+	<div id="main">
+        <div class="od_content">
+
+            <p id="site_mission">Find out who owns places near you, and help take responsibility for land, buildings and activities in your neighbourhood
+
+            <br />Kirklees land ownership data only at the moment</p>
+
+            <form method="post" action="#" id="postcodeform">
+
+                <p><span><b>Enter postcode or postcode sector (eg HD1):</b>&nbsp;</span>
+
+                <input type="text" name="postcode" value="" id="pcode" size="14" maxlength="10" />
+
+                <input type="submit" name="submit" id="pcodesubmit" value="Go" /></p>
+
+                <span id="map_key">Council owned land <img src="/x/img/plot.png" alt="Council owned land" /> </span>
+
+            </form>
+
+            <div class="map_holder">
+
+                <div id="mapdiv" class="map homemap">
+					<p id="photo_caption"><i>Berry Brow</i> by Alison Munday</p>
+				</div>
+				<div id="aggregator">
+					<h2>What's happening near you</h2>
+					<p><a href="#">A community contact has been added to the plot "Land situated on west & north west side of, and abutting Kilner Bank, Huddersfield"</a></p>
+					<p><a href="#">Local history: I remember using roller skates on the playground when...</a></p>
+					<p><a href="#">A community contact has been added to the plot "Fieldhouse Brickworks, Leeds Road, Huddersfield (8 acres 2 roods 16 perches and 300 sq yd) (Land on north east of Fieldhouse Lane, Huddersfield)"</a></p>
+					<p><a href="#">Local names: This was called the recce when I were knee high to a...</a></p>
+					<p><a href="#">Local history: I can't remember a thing</a></p>
+					<p><a href="#">Local history: There used to be a bus stop on the site of the...</a></p>
+					<p><a href="#">Local history: There was a sign that said "Death trap" at the...</a></p>
+					<p><a href="#">Local organisation: 423rd West Breckonridge Sea Scouts</a></p>
+				</div>
+            </div>
+
+
+        </div>
+	</div><!-- #main -->
+
+
+	<div id="footer" role="contentinfo">
+		<div class="addthis_toolbox addthis_default_style"> 
+			<a class="addthis_button_facebook"></a> 
+			<a class="addthis_button_twitter"></a> 
+			<a class="addthis_button_myspace"></a> 
+			<a class="addthis_button_stumbleupon"></a> 
+			<a class="addthis_button_digg"></a> 
+			<a class="addthis_button_google"></a> 
+			<a class="addthis_button_reddit"></a> 
+			<a class="addthis_button_favorites"></a> 
+			<a class="addthis_button_email"></a> 
+			<a class="addthis_button_print"></a> 
+		</div> 
+		<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4ce4fe9267294d05"></script> 
+		<div id="colophon">
+			<div id="site-info">
+				<a href="<?php echo WEBSITE_URL; ?>/" title="Who Owns My Neighbourhood?" rel="home">Who Owns My Neighbourhood?</a>
+			</div><!-- #site-info -->
+            <p class="addendum">
+                This service has been brought to you by <a href="http://www.thumbprint.coop" target="_blank">Thumbprint Co-operative</a>
+            </p>
+            <p class="addendum">
+                It has been produced as part of <a href="http://www.kirklees.gov.uk/">Kirklees Council</a>'s open data initiative in partnership with <a href="http://www.nesta.org.uk" target="_blank">NESTA</a>
+            </p>
+		</div><!-- #colophon -->
+	</div><!-- #footer -->
+</div><!-- #wrapper -->
+</body>
+</html>

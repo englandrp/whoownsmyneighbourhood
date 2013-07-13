@@ -1,0 +1,46 @@
+/* RESET VALUES: */
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, a, img, strong, dd, dl, dt, li, ol, ul, fieldset, form { margin:0; padding:0; border:0; font-weight:inherit; font-style:inherit; font-size:100%; line-height:1.2em; font-family:inherit; text-align:left; vertical-align:baseline; }
+html, body { height:100%; min-height:100%; }
+body { font:normal normal normal 62.5% Lucida Grande, Lucida Sans Unicode, Helvetica, Arial, sans-serif; }
+a img, a:link img, a:visited img { border:0; }
+ol, ul { margin-bottom:5px; }
+strong { font-weight:bold; }
+
+/* DEFAULT SETTINGS:*/
+body { color:#333; background-color:#fff; }
+dl { margin:0px 22px; }
+dl dd { margin:0 0 0 0; }
+dl dt { font-size:1.3em; }
+h1 { display:block; float:left; width:100%; margin:0; font:normal bold normal 2.4em/1.0em Arial, Verdana, sans-serif; }
+h2 { display:block; width:100%; margin:0; font:normal bold normal 1.8em/1.0em "Lucida Sans Unicode", "Lucida Grande", Tahoma, Arial, Verdana, sans-serif; }
+a { text-decoration:underline; color:#474747; }
+a:hover { text-decoration:none; color:#333; }
+img { border:none 0px; }
+p { font:normal normal normal 1.4em/1.6em "Lucida Grande", Tahoma, Arial, Verdana, sans-serif; }
+ul, dl, ol { display:block; margin:0; padding:0; }
+dt, dd { list-style:none; font:normal normal normal 1.2em/1.4em "Lucida Grande", Tahoma, Arial, Verdana, sans-serif; margin-bottom:4px; }
+li { list-style:disc; font:normal normal normal 1.2em/1.4em "Lucida Grande", Tahoma, Arial, Verdana, sans-serif; margin:0 0 4px 16px; }
+form { display:block; float:left; }
+fieldset { display:block; float:left; width:350px; padding:4px 0; background-color:#efefef; border-top:1px solid #fff; }
+label { display:block; float:left; width:100px; padding:4px; text-align:right; font-size:120%; }
+input { padding:2px; color:#666666; }
+hr { clear:both; visibility:hidden; height:20px; width:920px; margin:0 auto; padding:0px; }
+
+/* PAGE LAYOUT BLOCKS:*/
+.wrap { margin:0 auto 28px auto; width: 920px; padding:0 0 20px 0; overflow:hidden; text-align: center; }
+.maincontent { float:left; width:880px; padding:20px 20px 0 20px; background-color:#fff; }
+.contentcolumn { display:block; float:left; }
+.contentcolumnfullwidth { width:880px; }
+.contentcolumnwide { width:516px; margin:0 20px 0 0; }
+.contentcolumnthin { width:340px; }
+.contentcolumn h2 { margin:0 0 8px 0; }
+.contentcolumn p { margin:0 0 6px 0; }
+
+/* MISCELLANEOUS:*/
+.contentblock { display:block; float:left; margin:0 0 20px 0; }
+.alert { padding:4px; margin-bottom:1px; background-color:#000; color:#fff; font-weight:bold; }
+.right { float:right; }
+
+/* MAPPING */
+#home_map, #region_map { width:880px; height:582px; }
+#plot_map { width:516px; height:312px; }
